@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bihar: Ek Nazar</title>
+    <link rel="stylesheet" href="Bstyle.css">
+    <link rel="icon" type="image/png" href="Bicon.png">
+<link rel="manifest" href="Bmanifest.json">
+<meta name="theme-color" content="#2c3e50">
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo-section">
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+            <h1>Bihar: Ek Nazar</h1>
+        </div>
+        <div class="top-controls">
+            <button onclick="changeFontSize('plus')" title="Font Bada karein">A+</button>
+            <button onclick="changeFontSize('minus')" title="Font Chota karein">A-</button>
+            <button onclick="toggleFullScreen()" title="Full Screen">⛶</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-header">Topics</div>
+            <div id="topicsList"></div>
+        </div>
+
+        <div class="main-content">
+            <div class="display-card">
+                <h2 id="titleDisplay">Swagat Hai</h2>
+                <hr>
+                <div id="textDisplay" class="content-text">
+                    Baanyi taraf ke menu se koi bhi topic chunein Bihar ki jankari ke liye.
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <div class="tts-controls">
+                    <button onclick="startReading()" class="btn-play">▶ Suniye</button>
+                    <button onclick="stopReading()" class="btn-stop">⏹ Rokiye</button>
+                </div>
+                
+                <button onclick="shareContent()" class="btn-share">📤 Share</button>
+
+                <div class="google-search">
+                    <input type="text" id="gSearchInput" placeholder="Google par khojein...">
+                    <button onclick="googleSearch()">🔍</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Bapp.js"></script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('Bsw.js')
+        .then(reg => console.log('Service Worker Registered!', reg))
+        .catch(err => console.log('Registration Failed:', err));
+    });
+  }
+</script>
+</body>
+</html>
