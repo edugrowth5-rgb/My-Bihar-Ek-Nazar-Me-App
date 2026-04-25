@@ -1,4 +1,4 @@
-const cacheName = 'bihar-app-v1';
+const cacheName = 'bihar-app-v1.1';
 const assets = [
   'index.html',
   'Bstyle.css',
