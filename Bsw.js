@@ -1,6 +1,6 @@
 const cacheName = 'bihar-app-v1';
 const assets = [
-  'Bindex.html',
+  'index.html',
   'Bstyle.css',
   'Bapp.js',
   'Gemini_Generated_Image_od7eunod7eunod7e.png'
