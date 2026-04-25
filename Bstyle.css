@@ -1,0 +1,94 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #e67e22;
+    --bg: #f4f7f6;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    overflow: hidden;
+}
+
+.header {
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo-section { display: flex; align-items: center; }
+.menu-btn { background: none; border: 1px solid white; color: white; padding: 5px 10px; cursor: pointer; margin-right: 15px; border-radius: 4px; }
+
+.top-controls button {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container { display: flex; height: calc(100vh - 60px); }
+
+.sidebar {
+    width: 280px;
+    background: var(--white);
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    transition: 0.3s;
+}
+
+.sidebar.collapsed { margin-left: -280px; }
+.sidebar-header { background: #eee; padding: 15px; font-weight: bold; color: var(--primary); }
+
+.topic-btn {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.topic-btn:hover { background: #eef2f3; color: var(--accent); }
+
+.main-content { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; }
+
+.display-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.content-text {
+    line-height: 1.6;
+    color: #333;
+    white-space: pre-wrap; /* Points ko sahi dikhane ke liye */
+}
+
+.action-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    background: #eee;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.action-bar button { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; color: white; font-weight: bold; }
+.btn-play { background: #27ae60; }
+.btn-stop { background: #c0392b; }
+.btn-share { background: #3498db; }
+
+.google-search { display: flex; flex-grow: 1; margin-left: 10px; }
+.google-search input { flex-grow: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px 0 0 5px; }
+.google-search button { background: var(--primary); border-radius: 0 5px 5px 0; }
