@@ -3,7 +3,7 @@ const assets = [
   'Bindex.html',
   'Bstyle.css',
   'Bapp.js',
-  'Bicon.png'
+  'Gemini_Generated_Image_od7eunod7eunod7e.png'
 ];
 
 // Install event
